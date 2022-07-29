@@ -91,19 +91,21 @@ public class anotherway
 	    	Scanner in=new Scanner(System.in);
 	        int leng = arrayList.size();
 	        System.out.println("Enter the expense you need to search:\t");
-	        //Complete the method
-	        int key=in.nextInt();
-	        int found=0;
-	        int index=0;
-	        for(int i=0; i<leng; i++) {
-	            
-	            if(arrayList.get(i)==key) {
-	                found=1;
-	                index=i;
+	       
+	        
+	        Scanner sc = new Scanner(System.in);
+	        int value = sc.nextInt();
+	        int i = 0;
+	        if (i < leng)
+	        {
+	            if (arrayList.contains(value))
+	            {
+	                System.out.println(" the value is there ");
 	            }
-	        }
-	        if(found==1) {
-	        	System.out.println(key+ " is found at index " +index);
+	            else
+	            {
+	                    System.out.println("the value is not there");
+	            }
 	        }
 
 	   }
@@ -128,6 +130,7 @@ public class anotherway
 	            }
 
 	        }
+	        System.out.println("the sorted elements are");
 	        for (int i: arrayList) {
 	            System.out.print(i+ "   ");
 	        }
